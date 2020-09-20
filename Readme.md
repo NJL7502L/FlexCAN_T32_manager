@@ -1,16 +1,16 @@
-# FlexCAN_T4_manager
+# FlexCAN_T32_manager
 
-## FlexCAN_T4_managerの概要
-Teensy4.0で行われる全てのCAN通信の送受信を管理する\
+## FlexCAN_T32_managerの概要
+Teensy3.2で行われる全てのCAN通信の送受信を管理する\
 全てのCAN通信はこのライブラリを通して行われる。
 そのためこのライブラリはシングルトンである。
 
 ## 各関数の説明(public関数のみ)
 ```c++
-static FlexCAN_T4_manager *getInstance()
+static FlexCAN_T32_manager *getInstance()
 ```
 インスタンスのアドレスを返す.
-FlexCAN_T4_managerにアクセスする時に唯一インスタンスにアクセスすることができる関数。基本的に他のクラスでこれを呼び出してアロー演算子を使用してこのクラスのメンバ関数にアクセスする。
+FlexCAN_T32_managerにアクセスする時に唯一インスタンスにアクセスすることができる関数。基本的に他のクラスでこれを呼び出してアロー演算子を使用してこのクラスのメンバ関数にアクセスする。
 
 
 ```c++
@@ -88,10 +88,10 @@ void writeAll()
 ### setupより前に書く
 
 ```c++
-#include <FlexCAN_T4_manager.h>
-FlexCAN_T4_manager* canmanager = FlexCAN_T4_manager::getInstance()
+#include <FlexCAN_T32_manager.h>
+FlexCAN_T32_manager* canmanager = FlexCAN_T32_manager::getInstance()
 ```
-getInstance()がFlexCAN_T4_managerのインスタンスのアドレスを返すので、
+getInstance()がFlexCAN_T32_managerのインスタンスのアドレスを返すので、
 返されたアドレスをポインタ変数としてcanmanagerに格納する。
 
 
